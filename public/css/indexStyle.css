@@ -1,0 +1,18 @@
+body {
+    background-color: #363636;
+    color: white;
+}
+
+#card {
+    color: black;
+}
+
+#welcome {
+    height: 500px;
+    width: 500px;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}

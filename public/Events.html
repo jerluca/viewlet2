@@ -1,0 +1,166 @@
+<html> 
+<head> 
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>	
+<link rel = "stylesheet" href= "css/event.css"/>
+
+
+
+
+		</head>
+
+ 
+<body class = "webpage_colors">
+
+<header> 
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container">
+               <a href="index.html"> <img src="images/Viewlet.png" class="image_size"></a> 
+                
+            </div>
+        </nav>
+    </header> 
+
+<p> Welcome to the events page! Here you will be able to find a wealth 
+of fun and engaging activities you can get involved with a friend with! </p>
+
+ <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <a href="Join_event.html">
+  <img src="images/White-House-Washington-DC.jpg" style="width:100%"> </a>
+  <div class="text"><b> White House Party </b> <br>
+  
+  <p> In a couple of weeks it will be George Washington's Birthday! Join now for free food and
+have the chance to meet the President himself!  </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <a href="Join_event.html">
+  <img src="images/bluemoon.jpg" style="width:100%"> </a>
+  <div class="text"> <b> Blue Moon Celebration </b> <br>
+  <p> 1/17/2030 will be the day we celebrate the blue moon! A day full of fun events, 
+prizes and so much more! Register in the next five days to get a free mug!  </p>
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <a href="Join_event.html">
+  <img src="images/Cloudy.jpg" style="width:100%"> </a>
+  <div class="text"><b> Weather Patterns </b> <p> Come on down to pierce lake to learn about 
+the various patterns of our beautiful sky and take in the scenary!  </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <a href="Join_event.html">
+  <img src="images/mount_everest.jfif" style="width:100%"> </a>
+  <div class="text">Mount Everest Cleanup <p> This is a wonderful opportunity for our fellow mountain
+climbers! Join us as we restore this once beautiful mountain into what it once was! There will even 
+be prizes for our quicker workers!   </p></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <a href="Join_event.html">
+  <img src="images/space.jpg" style="width:100%"> 
+  <div class="text"><b> Space Journey </b> <p> Come to the Planetarium and embark on a journey as we learn about the Cosmos! 
+Astronauts and everyone else are welcome to join! </p>  </div> 
+</div>
+
+
+</div> <br> <br> &nbsp
+<form action = "home.html"  >  <button class="btn btn-danger" type="submit" role="button">Exit 
+</button> </form> <br> 
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>   
+<span class="dot" onclick="currentSlide(5)"></span>   
+</div>
+
+<script src="js/event_slideshow.js">
+
+</script>  
+2024 Events: A brief list of the events coming up!
+<!-- f  The Javascript files below are used to take data from the server.js backend!-->
+<script> 
+fetch('/data') 
+	
+      .then(response => response.json())
+      .then(data => {
+        
+        document.getElementById('output').innerText =  data.event_1 ;
+      }
+	  )
+      .catch(error => console.error('Error:', error));
+</script> 
+ 
+<script> 
+fetch('/data') 
+	
+      .then(response => response.json())
+      .then(data => {
+        
+        document.getElementById('output2').innerText =  data.event_2 ;
+      }
+	  ) 
+      .catch(error => console.error('Error:', error));
+</script>
+
+<script> 
+fetch('/data') 
+	
+      .then(response => response.json())
+      .then(data => {
+        
+        document.getElementById('output3').innerText =  data.event_3 ;
+      }
+	  ) 
+      .catch(error => console.error('Error:', error));
+</script> 
+ 
+ 
+<script> 
+fetch('/data') 
+      .then(response => response.json())
+      .then(data => {   
+        document.getElementById('output4').innerText =  data.event_4 ;
+      }
+	  )   
+      .catch(error => console.error('Error:', error));
+</script>
+ 
+ <script> 
+fetch('/data') 
+      .then(response => response.json())
+      .then(data => {  
+        document.getElementById('output5').innerText =  data.event_5 ;
+      }
+	  )  
+      .catch(error => console.error('Error:', error));
+</script>
+
+<!-- The backend data is then outputed as a small list users can look at. -->
+<h3 id="output"> <%= event_1 %></h3> 
+ <h3 id="output2"> <%= event_2 %></h3>
+<h3 id="output3"> <%= event_3 %></h3> 
+<h3 id="output4"> <%= event_4 %></h3>
+ <h3 id="output5"> <%= event_5 %></h3>
+
+
+ 
+ 
+		</body>
+</html>

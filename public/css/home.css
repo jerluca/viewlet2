@@ -1,0 +1,28 @@
+	.backgroundcolors{
+	color: white;
+	background-color: #363636;} 
+	
+	.header{
+	color: black; 
+	background-color:#2272FF;} 
+	
+}
+
+
+label {
+  display: block;
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
+.image_size{
+	width: 100px; 
+	height: 100px;
+
+}
